@@ -30,6 +30,7 @@ const cardDeck = document.querySelector('.deck');
 
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
+  const target = event.target; // Event Delegation
   console.log('click');
 })
 /*
