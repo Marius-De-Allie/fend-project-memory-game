@@ -25,6 +25,8 @@ function shuffle(array) {
     return array;
 }
 
+// Select parent element of game cards from DOM.
+const cardDeck = document.querySelector('.deck');
 
 /*
  * set up the event listener for a card. If a card is clicked:
