@@ -31,7 +31,9 @@ const cardDeck = document.querySelector('.deck');
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
   const target = event.target; // Event Delegation
-  console.log('click');
+  if (target.classList.contains('card') {
+    console.log('click');
+  }
 })
 /*
  * set up the event listener for a card. If a card is clicked:
