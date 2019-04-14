@@ -32,9 +32,11 @@ const cardDeck = document.querySelector('.deck');
 cardDeck.addEventListener('click', function(event) {
   const target = event.target; // Event Delegation
   if (target.classList.contains('card') {
+    target.classList.toggle('open');
+    target.classList.toggle('show');
     console.log('click');
   }
-})
+});
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
