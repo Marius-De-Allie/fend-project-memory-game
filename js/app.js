@@ -25,6 +25,7 @@ function shuffle(array) {
     return array;
 }
 
+let flippedCards = [];
 // Select parent element of game cards from DOM.
 const cardDeck = document.querySelector('.deck');
 
