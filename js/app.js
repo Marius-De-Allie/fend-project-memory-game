@@ -28,6 +28,10 @@ function shuffle(array) {
 // Select parent element of game cards from DOM.
 const cardDeck = document.querySelector('.deck');
 
+// Event listener for click on cards parent element using event delegation
+cardDeck.addEventListener('click', function(event) {
+  console.log('click');
+})
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
