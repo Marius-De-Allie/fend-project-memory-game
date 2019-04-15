@@ -38,10 +38,10 @@ function comparCards () {
     to 'match' class.*/
   }
   else {
-    flippedCards[0].classList.toggle('open');
-    flippedCards[0].classList.toggle('show');
-    flippedCards[1].classList.toggle('open');
-    flippedCards[1].classList.toggle('show');
+    for (card of flippedCards) {
+      card.classList.toggle('open');
+      card.classList.toggle('show');
+    }
     flippedCards = [];
   }
 }
