@@ -31,10 +31,11 @@ let flippedCards = [];
 function comparCards () {
   if (flippedCards[0].firstElementChild.className === flippedCards[1].
   firstElementChild.className) {
-    flippedCards[0].classList.toggle('match');
-    flippedCards[1].classList.toggle('match');
+    for (card of flippedCards) {
+      card.classList.toggle('match');
+    }
     flippedCards = []; /*empty array after matching card classes have been set
-    to 'match'.*/
+    to 'match' class.*/
   }
   else {
     flippedCards[0].classList.toggle('open');
