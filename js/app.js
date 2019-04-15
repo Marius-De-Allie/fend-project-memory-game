@@ -45,8 +45,10 @@ function comparCards () {
   }
   else {
     for (card of flippedCards) {
-      card.classList.toggle('open');
-      card.classList.toggle('show');
+      // card.classList.toggle('open');
+      // card.classList.toggle('show');
+      console.log(card);
+      toggleOpenShow(card);
     }
     flippedCards = [];
   }
