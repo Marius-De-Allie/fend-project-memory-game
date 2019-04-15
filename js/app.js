@@ -37,7 +37,11 @@ function comparCards () {
     to 'match'.*/
   }
   else {
-    console.log('cards do not match.');
+    flippedCards[0].classList.toggle('open');
+    flippedCards[0].classList.toggle('show');
+    flippedCards[1].classList.toggle('open');
+    flippedCards[1].classList.toggle('show');
+    flippedCards = [];
   }
 }
 
