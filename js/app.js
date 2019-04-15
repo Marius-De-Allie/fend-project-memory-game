@@ -43,11 +43,13 @@ function comparCards () {
     flippedCards = []; /*empty array after matching card classes have been set
     to 'match' class.*/
   }
-  else { //toggle off open show classes on both cards in flippedCards array.
-    for (card of flippedCards) {
-      toggleOpenShow(card);
-    }
-    flippedCards = [];
+  else {
+    setTimeout(function() {
+      for (card of flippedCards) {
+        toggleOpenShow(card)
+      }
+      flippedCards = [];
+    }, 1000);
   }
 }
 
@@ -60,8 +62,6 @@ cardDeck.addEventListener('click', function(event) {
   if (target.classList.contains('card') && flippedCards.length < 2 &&
   !target.classList.contains('match') && !flippedCards.includes(target)) {
     toggleOpenShow(target);
-    // target.classList.toggle('open');
-    // target.classList.toggle('show');
     flippedCards.push(target); //add clicked card to flippedCards array.
     // If flippedCards array has two cards, check for a match.
     if (flippedCards.length === 2) {
