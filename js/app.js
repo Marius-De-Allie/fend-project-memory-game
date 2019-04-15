@@ -26,6 +26,21 @@ function shuffle(array) {
 }
 
 let flippedCards = [];
+
+// function to check for card match in flippedCards array
+function comparCards () {
+  if (flippedCards[0].firstElementChild.className === flippedCards[1].
+  firstElementChild.className) {
+    flippedCards[0].classList.toggle('match');
+    flippedCards[1].classList.toggle('match');
+    flippedCards = []; /*empty array after matching card classes have been set
+    to 'match'.*/
+  }
+  else {
+    console.log('cards do not match.');
+  }
+}
+
 // Select parent element of game cards from DOM.
 const cardDeck = document.querySelector('.deck');
 
