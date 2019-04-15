@@ -52,8 +52,9 @@ cardDeck.addEventListener('click', function(event) {
     target.classList.toggle('open');
     target.classList.toggle('show');
     flippedCards.push(target); //add clicked card to flippedCards array.
+    // If flippedCards array has two cards, check for a match.
     if (flippedCards.length === 2) {
-      console.log('flippedCards array length is 2.');
+      comparCards();
     }
   }
 });
