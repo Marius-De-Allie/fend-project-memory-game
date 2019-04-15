@@ -35,7 +35,7 @@ cardDeck.addEventListener('click', function(event) {
   if (target.classList.contains('card')) {
     target.classList.toggle('open');
     target.classList.toggle('show');
-    console.log('click');
+    flippedCards.push(target); //add clicked card to flippedCards array.
   }
 });
 /*
