@@ -33,7 +33,7 @@ const cardDeck = document.querySelector('.deck');
 cardDeck.addEventListener('click', function(event) {
   const target = event.target; // Event Delegation
   if (target.classList.contains('card') && flippedCards.length < 2 &&
-  !target.classList.contains('match')) {
+  !target.classList.contains('match') && !flippedCards.includes(target)) {
     target.classList.toggle('open');
     target.classList.toggle('show');
     flippedCards.push(target); //add clicked card to flippedCards array.
