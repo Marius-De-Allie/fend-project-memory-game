@@ -27,6 +27,12 @@ function shuffle(array) {
 
 let flippedCards = [];
 
+// function to toggle class ('open show') of cards.
+function toggleOpenShow (targetCard) {
+  targetCard.classList.toggle('open');
+  targetCard.classList.toggle('show');
+}
+
 // function to check for card match in flippedCards array
 function comparCards () {
   if (flippedCards[0].firstElementChild.className === flippedCards[1].
