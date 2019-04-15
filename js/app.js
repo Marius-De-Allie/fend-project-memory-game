@@ -32,7 +32,7 @@ const cardDeck = document.querySelector('.deck');
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
   const target = event.target; // Event Delegation
-  if (target.classList.contains('card')) {
+  if (target.classList.contains('card') && flippedCards.length < 2) {
     target.classList.toggle('open');
     target.classList.toggle('show');
     flippedCards.push(target); //add clicked card to flippedCards array.
