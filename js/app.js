@@ -37,17 +37,14 @@ function toggleOpenShow (targetCard) {
 function comparCards () {
   if (flippedCards[0].firstElementChild.className === flippedCards[1].
   firstElementChild.className) {
-    for (card of flippedCards) {
+    for (card of flippedCards) { //toggle match class on both cards in array.
       card.classList.toggle('match');
     }
     flippedCards = []; /*empty array after matching card classes have been set
     to 'match' class.*/
   }
-  else {
+  else { //toggle off open show classes on both cards in flippedCards array.
     for (card of flippedCards) {
-      // card.classList.toggle('open');
-      // card.classList.toggle('show');
-      console.log(card);
       toggleOpenShow(card);
     }
     flippedCards = [];
@@ -62,8 +59,9 @@ cardDeck.addEventListener('click', function(event) {
   const target = event.target; // Event Delegation
   if (target.classList.contains('card') && flippedCards.length < 2 &&
   !target.classList.contains('match') && !flippedCards.includes(target)) {
-    target.classList.toggle('open');
-    target.classList.toggle('show');
+    toggleOpenShow(target);
+    // target.classList.toggle('open');
+    // target.classList.toggle('show');
     flippedCards.push(target); //add clicked card to flippedCards array.
     // If flippedCards array has two cards, check for a match.
     if (flippedCards.length === 2) {
