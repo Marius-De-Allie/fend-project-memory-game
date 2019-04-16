@@ -25,6 +25,11 @@ function shuffle(array) {
     return array;
 }
 
+// Select parent element of game cards from DOM.
+const cardDeck = document.querySelector('.deck');
+// select all 16 card list elements and save to an array (allCards).
+const allCards = [...document.querySelectorAll('.deck li')];
+
 let flippedCards = [];
 
 // function to toggle class ('open show') of cards.
@@ -53,8 +58,6 @@ function comparCards () {
   }
 }
 
-// Select parent element of game cards from DOM.
-const cardDeck = document.querySelector('.deck');
 
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
