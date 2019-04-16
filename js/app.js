@@ -77,6 +77,10 @@ cardDeck.addEventListener('click', function(event) {
 
 //Select restart button element from DOM.
 const restart = document.querySelector('.restart i');
+//restart button click event listener.
+restart.addEventListener('click', function() {
+  console.log('restart game, shuffle cards.');
+});
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
