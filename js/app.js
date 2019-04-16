@@ -27,8 +27,10 @@ function shuffle(array) {
 
 // Select parent element of game cards from DOM.
 const cardDeck = document.querySelector('.deck');
-// select all 16 card list elements and save to an array (allCards).
+
+// select all 16 card list elements and assign to array (allCards).
 const allCards = [...document.querySelectorAll('.deck li')];
+
 
 let flippedCards = [];
 
@@ -72,6 +74,9 @@ cardDeck.addEventListener('click', function(event) {
     }
   }
 });
+
+//Select restart button element from DOM.
+const restart = document.querySelector('.restart i');
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
