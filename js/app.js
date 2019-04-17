@@ -32,8 +32,11 @@ const cardDeck = document.querySelector('.deck');
 const allCards = [...document.querySelectorAll('.deck li')];
 
 let flippedCards = [];
-
+// declare variable to track player moves.
 let playerMoves = 0;
+// select stars parent element
+const starParent = document.querySelector('.stars');
+
 
 // function to toggle class ('open show') of cards.
 function toggleOpenShow (targetCard) {
@@ -72,9 +75,19 @@ cardDeck.addEventListener('click', function(event) {
     // If flippedCards array has two cards, check for a match.
     if (flippedCards.length === 2) {
       comparCards();
+      // increment moves counter element by one for each 2 cards that are clicked.
       playerMoves++;
       const movesContent = document.querySelector('.moves');
       movesContent.innerHTML = playerMoves;
+      // adjust stars (score) based on # of player moves
+      switch (playerMoves) {
+        case 12:
+          starParent.removeChild(document.querySelector('li'));
+          break;
+        case 16:
+          starParent.removeChild(document.querySelector('li'));
+          break;
+      }
     }
   }
 });
