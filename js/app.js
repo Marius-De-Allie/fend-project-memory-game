@@ -38,6 +38,8 @@ let playerMoves = 0;
 const starParent = document.querySelector('.stars');
 //declare variable to keep track of status of game timer(clock), set to off.
 let timerOff = true;
+//declare variable to hold value of time.
+let time = 0;
 
 //Add timer(clock) element to DOM.
 const scorePanel = document.querySelector('.score-panel');
