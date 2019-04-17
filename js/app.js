@@ -115,7 +115,7 @@ restart.addEventListener('click', function() {
   let cardsShuffled = shuffle(allCards);
   for (card of cardsShuffled) {
     cardDeck.appendChild(card);
-    allCards.className = 'card';
+    card.className = 'card';
   }
 });
 /*
