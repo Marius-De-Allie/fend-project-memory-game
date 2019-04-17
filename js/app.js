@@ -36,8 +36,15 @@ let flippedCards = [];
 let playerMoves = 0;
 // select stars parent element
 const starParent = document.querySelector('.stars');
+//declare variable to keep track of status of game timer(clock), set to off.
+let timerOff = true;
 
-let timerStart = false;
+//Add timer(clock) element to DOM.
+const scorePanel = document.querySelector('.score-panel');
+const clock = document.createElement('span');
+clock.className  += 'clock';
+console.log(clock);
+scorePanel.insertAdjacentHTML('afterend', clock.textContent = '0:00');
 
 // function to toggle class ('open show') of cards.
 function toggleOpenShow (targetCard) {
