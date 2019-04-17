@@ -112,7 +112,11 @@ cardDeck.addEventListener('click', function(event) {
 const restart = document.querySelector('.restart i');
 //restart button click event listener.
 restart.addEventListener('click', function() {
-  console.log('restart game, shuffle cards.');
+  let cardsShuffled = shuffle(allCards);
+  for (card of cardsShuffled) {
+    cardDeck.appendChild(card);
+    allCards.className = 'card';
+  }
 });
 /*
  * set up the event listener for a card. If a card is clicked:
