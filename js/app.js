@@ -37,6 +37,7 @@ let playerMoves = 0;
 // select stars parent element
 const starParent = document.querySelector('.stars');
 
+let timerStart = false;
 
 // function to toggle class ('open show') of cards.
 function toggleOpenShow (targetCard) {
