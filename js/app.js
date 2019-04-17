@@ -80,6 +80,12 @@ cardDeck.addEventListener('click', function(event) {
   const target = event.target; // Event Delegation
   if (target.classList.contains('card') && flippedCards.length < 2 &&
   !target.classList.contains('match') && !flippedCards.includes(target)) {
+    if (timerOff) {
+      let intervalId = setInterval( function() {
+        time++;
+      }, 1000);
+      timerOff = false;
+    }
     toggleOpenShow(target);
     flippedCards.push(target); //add clicked card to flippedCards array.
     // If flippedCards array has two cards, check for a match.
