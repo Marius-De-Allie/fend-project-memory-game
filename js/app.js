@@ -31,8 +31,9 @@ const cardDeck = document.querySelector('.deck');
 // select all 16 card list elements and assign to array (allCards).
 const allCards = [...document.querySelectorAll('.deck li')];
 
-
 let flippedCards = [];
+
+let playerMoves = 0;
 
 // function to toggle class ('open show') of cards.
 function toggleOpenShow (targetCard) {
