@@ -72,6 +72,9 @@ cardDeck.addEventListener('click', function(event) {
     // If flippedCards array has two cards, check for a match.
     if (flippedCards.length === 2) {
       comparCards();
+      playerMoves++;
+      const movesContent = document.querySelector('.moves');
+      movesContent.innerHTML = playerMoves;
     }
   }
 });
