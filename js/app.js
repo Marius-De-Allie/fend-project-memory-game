@@ -94,6 +94,17 @@ function movesCounter () {
   movesContent.innerHTML = playerMoves;
 }
 
+// Function to adjust player score based on number of player moves made.
+function score () {
+  switch (playerMoves) {
+    case 12:
+      starParent.removeChild(document.querySelector('li'));
+      break;
+    case 16:
+      starParent.removeChild(document.querySelector('li'));
+      break;
+  }
+}
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
   const target = event.target; // Event Delegation
