@@ -122,15 +122,7 @@ cardDeck.addEventListener('click', function(event) {
     if (flippedCards.length === 2) {
       comparCards();
       movesCounter();
-      // adjust stars (score) based on # of player moves
-      switch (playerMoves) {
-        case 12:
-          starParent.removeChild(document.querySelector('li'));
-          break;
-        case 16:
-          starParent.removeChild(document.querySelector('li'));
-          break;
-      }
+      score();       // adjust stars (score) based on # of player moves
     }
   }
 });
