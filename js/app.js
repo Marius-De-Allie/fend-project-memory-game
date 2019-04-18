@@ -123,7 +123,7 @@ cardDeck.addEventListener('click', function(event) {
 const restart = document.querySelector('.restart i');
 //restart button click event listener.
 restart.addEventListener('click', function() {
-  console.log('refresh deck of cards.');
+  shuffleCards();
 });
 /*
  * set up the event listener for a card. If a card is clicked:
