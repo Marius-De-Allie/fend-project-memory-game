@@ -85,6 +85,14 @@ function comparCards () {
   }
 }
 
+/* function to increment moves counter element by one after 2 cards have been
+/*  clicked.
+*/
+function movesCounter () {
+  playerMoves++;
+  const movesContent = document.querySelector('.moves');
+  movesContent.innerHTML = playerMoves;
+}
 
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
@@ -98,14 +106,11 @@ cardDeck.addEventListener('click', function(event) {
       timerOff = false;
     }
     toggleOpenShow(target);
-    flippedCards.push(target); //add clicked card to flippedCards array.
-    // If flippedCards array has two cards, check for a match.
+    flippedCards.push(target); /*add clicked card to flippedCards array.
+    If flippedCards array has two cards, check for a match. */
     if (flippedCards.length === 2) {
       comparCards();
-      // increment moves counter element by one for each 2 cards that are clicked.
-      playerMoves++;
-      const movesContent = document.querySelector('.moves');
-      movesContent.innerHTML = playerMoves;
+      
       // adjust stars (score) based on # of player moves
       switch (playerMoves) {
         case 12:
