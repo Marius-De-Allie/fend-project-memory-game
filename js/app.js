@@ -110,7 +110,7 @@ cardDeck.addEventListener('click', function(event) {
     If flippedCards array has two cards, check for a match. */
     if (flippedCards.length === 2) {
       comparCards();
-      
+      movesCounter();
       // adjust stars (score) based on # of player moves
       switch (playerMoves) {
         case 12:
