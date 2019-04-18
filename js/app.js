@@ -41,6 +41,17 @@ let timerOff = true;
 //declare variable to hold value of time.
 let time = 0;
 
+// Function to shuffle deck of cards
+function shuffleCards() {
+  let cardsShuffled = shuffle(allCards);
+  for (card of cardsShuffled) {
+    cardDeck.appendChild(card);
+    card.className = 'card';
+  }
+}
+
+shuffleCards();
+
 //Add timer(clock) element to DOM.
 const scorePanel = document.querySelector('.score-panel');
 const clock = document.createElement('span');
@@ -112,11 +123,7 @@ cardDeck.addEventListener('click', function(event) {
 const restart = document.querySelector('.restart i');
 //restart button click event listener.
 restart.addEventListener('click', function() {
-  let cardsShuffled = shuffle(allCards);
-  for (card of cardsShuffled) {
-    cardDeck.appendChild(card);
-    card.className = 'card';
-  }
+  console.log('refresh deck of cards.');
 });
 /*
  * set up the event listener for a card. If a card is clicked:
