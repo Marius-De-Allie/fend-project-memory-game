@@ -120,8 +120,7 @@ h1 {
 .modal_content {
   position: relative;
   transform: translate(-50%, -30%);
-  width: 400px;
-  height: 400px;
+  width: 600px;
   top: 50%;
   left: 50%;
   background: white;
@@ -163,9 +162,11 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1.5rem;
 }
 
 #restart_button {
   width: 90px;
   height: 40px;
+  font-weight: bold;
 }
