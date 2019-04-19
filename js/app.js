@@ -98,6 +98,13 @@ function score () {
       break;
   }
 }
+
+// function to start timer and increment time.
+function startTimer() {
+  let intervalId = setInterval(function() {
+    time++;
+  }, 1000);
+}
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
   const target = event.target; // Event Delegation
