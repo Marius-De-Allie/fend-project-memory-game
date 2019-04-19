@@ -52,13 +52,6 @@ function shuffleCards() {
 
 shuffleCards();
 
-//Add timer(clock) element to DOM.
-const scorePanel = document.querySelector('.score-panel');
-const clock = document.createElement('span');
-clock.className  += 'clock';
-console.log(clock);
-scorePanel.insertAdjacentHTML('afterend', clock.textContent = '0:00');
-
 // function to toggle class ('open show') of cards.
 function toggleOpenShow (targetCard) {
   targetCard.classList.toggle('open');
@@ -111,7 +104,7 @@ cardDeck.addEventListener('click', function(event) {
   if (target.classList.contains('card') && flippedCards.length < 2 &&
   !target.classList.contains('match') && !flippedCards.includes(target)) {
     if (timerOff) {
-      let intervalId = setInterval( function() {
+      let intervalId = setInterval(function() {
         time++;
       }, 1000);
       timerOff = false;
