@@ -125,6 +125,11 @@ function startTimer() {
 function resetClock() {
   clearInterval(timerId);
 }
+
+// Function to add game stats to modal.
+function addModalData() {
+
+}
 // Call to resetClock fn to allow clock to be reset with page reloads.
 resetClock();
 // Event listener for click on cards parent element using event delegation
