@@ -99,19 +99,25 @@ function score () {
   }
 }
 
-// function to start timer and increment time.
-function startTimer() {
-  let intervalId = setInterval(function() {
-    time++;
-    console.log(time);
-  }, 1000);
-}
-
 // Function to show game time.
 function showTime() {
   const timer = document.querySelector('.clock');
-  console.log(timer);
-  timer.innerHTML = time;
+  const mins = Math.floor(time/60);
+  const secs = Math.floor(time%60);
+  if (secs < 10) {
+    timer.innerHTML = `${mins}:0${secs}`;
+  }
+  else {
+    timer.innerHTML = `${mins}:${secs}`;
+  }
+}
+
+// function to start timer and increment time.
+function startTimer() {
+  let timerId = setInterval(function() {
+    time++;
+    showTime();
+  }, 1000);
 }
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
@@ -121,7 +127,6 @@ cardDeck.addEventListener('click', function(event) {
     if (timerOff) {
       startTimer();
       timerOff = false;
-      showTime();
     }
     toggleOpenShow(target);
     flippedCards.push(target); /*add clicked card to flippedCards array.
