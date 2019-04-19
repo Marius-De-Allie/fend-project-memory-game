@@ -40,6 +40,7 @@ const starParent = document.querySelector('.stars');
 let timerOff = true;
 //declare variable to hold value of time.
 let time = 0;
+let timerId;
 
 // Function to shuffle deck of cards
 function shuffleCards() {
@@ -114,7 +115,7 @@ function showTime() {
 
 // function to start timer and increment time.
 function startTimer() {
-  let timerId = setInterval(function() {
+  timerId = setInterval(function() {
     time++;
     showTime();
   }, 1000);
@@ -124,6 +125,7 @@ function startTimer() {
 function resetClock() {
   clearInterval(timerId);
 }
+resetClock();
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
   const target = event.target; // Event Delegation
