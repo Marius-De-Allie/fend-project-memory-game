@@ -103,7 +103,15 @@ function score () {
 function startTimer() {
   let intervalId = setInterval(function() {
     time++;
+    console.log(time);
   }, 1000);
+}
+
+// Function to show game time.
+function showTime() {
+  const timer = document.querySelector('.clock');
+  console.log(timer);
+  timer.innerHTML = time;
 }
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
@@ -111,10 +119,9 @@ cardDeck.addEventListener('click', function(event) {
   if (target.classList.contains('card') && flippedCards.length < 2 &&
   !target.classList.contains('match') && !flippedCards.includes(target)) {
     if (timerOff) {
-      let intervalId = setInterval(function() {
-        time++;
-      }, 1000);
+      startTimer();
       timerOff = false;
+      showTime();
     }
     toggleOpenShow(target);
     flippedCards.push(target); /*add clicked card to flippedCards array.
