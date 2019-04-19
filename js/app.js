@@ -125,6 +125,7 @@ function startTimer() {
 function resetClock() {
   clearInterval(timerId);
 }
+// Call to resetClock fn to allow clock to be reset with page reloads.
 resetClock();
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
