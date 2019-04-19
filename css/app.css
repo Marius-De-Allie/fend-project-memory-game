@@ -107,3 +107,22 @@ h1 {
     float: right;
     cursor: pointer;
 }
+
+#modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal_content {
+  position: relative;
+  transform: translate(-50%, -30%);
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  background: white;
+}
