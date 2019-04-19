@@ -126,3 +126,35 @@ h1 {
   left: 50%;
   background: white;
 }
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: red;
+}
+#header_text {
+  text-align: center;
+  font-family: cursive, arial, sans-serif;
+  margin-left: 0.5rem;
+  color: white;
+}
+
+.close_button {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: white;
+}
+
+.modal_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.body_text {
+  margin-left: 1.5rem;
+  font-size: 1.15rem;
+}
