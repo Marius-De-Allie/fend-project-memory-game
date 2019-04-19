@@ -119,6 +119,11 @@ function startTimer() {
     showTime();
   }, 1000);
 }
+
+// Function to reset game clock.
+function resetClock() {
+  clearInterval(timerId);
+}
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
   const target = event.target; // Event Delegation
