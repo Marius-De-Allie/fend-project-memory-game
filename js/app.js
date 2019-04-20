@@ -36,11 +36,13 @@ let flippedCards = [];
 let playerMoves = 0;
 // select stars parent element
 const starParent = document.querySelector('.stars');
-//declare variable to keep track of status of game timer(clock), set to off.
+// declare variable to keep track of status of game timer(clock), set to off.
 let timerOff = true;
-//declare variable to hold value of time.
+// declare variable to hold value of time.
 let time = 0;
 let timerId;
+ // select modal close button element and assign to variable.
+const modalClose = document.querySelector('.close_button');
 
 // Function to shuffle deck of cards
 function shuffleCards() {
@@ -154,6 +156,7 @@ function toggleModal() {
   document.querySelector('.modal').classList.toggle('hidden');
 }
 toggleModal();
+
 // Call to resetClock fn to allow clock to be reset with page reloads.
 resetClock();
 // Event listener for click on cards parent element using event delegation
