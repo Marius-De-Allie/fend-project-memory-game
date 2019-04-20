@@ -43,6 +43,8 @@ let time = 0;
 let timerId;
  // select modal close button element and assign to variable.
 const modalClose = document.querySelector('.close_button');
+ // select all star elements from DOM and assign to variable.
+totalStars = [...document.querySelectorAll('.star li')];
 
 // Function to shuffle deck of cards
 function shuffleCards() {
@@ -81,9 +83,7 @@ function comparCards () {
   }
 }
 
-/* function to increment moves counter element by one after 2 cards have been
-/*  clicked.
-*/
+ // function to increment moves counter element by one.
 function movesCounter () {
   playerMoves++;
   const movesContent = document.querySelector('.moves');
@@ -130,7 +130,6 @@ function resetClock() {
 
 // function to return score (# of stars) from last game played.
 function numberOfStars() {
-  totalStars = [...document.querySelectorAll('.star li')];
   stars = 0;
   for (star of totalStars) {
     stars++;
