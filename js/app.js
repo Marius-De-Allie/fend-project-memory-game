@@ -130,6 +130,7 @@ function resetClock() {
 function addModalData() {
   const gameTime = document.querySelector('.clock').innerHTML;
   document.querySelector('#time').innerHTML = `Time: ${gameTime}`;
+  document.querySelector('#moves').innerHTML = `Moves: ${playerMoves}`;
 }
 
 // addModalData();
