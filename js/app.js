@@ -128,8 +128,11 @@ function resetClock() {
 
 // Function to add game stats to modal.
 function addModalData() {
-
+  const gameTime = document.querySelector('.clock').innerHTML;
+  document.querySelector('#time').innerHTML = `Time: ${gameTime}`;
 }
+
+// addModalData();
 // Call to resetClock fn to allow clock to be reset with page reloads.
 resetClock();
 // Event listener for click on cards parent element using event delegation
