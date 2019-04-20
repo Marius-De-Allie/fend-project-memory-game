@@ -133,6 +133,15 @@ function addModalData() {
   document.querySelector('#moves').innerHTML = `Moves: ${playerMoves}`;
 }
 
+function numberOfStars() {
+  totalStars = [...document.querySelectorAll('.star li');
+  stars = 0;
+  for (star of totalStars) {
+    stars++;
+  }
+}
+return stars;
+
 // addModalData();
 // Call to resetClock fn to allow clock to be reset with page reloads.
 resetClock();
