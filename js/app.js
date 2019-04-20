@@ -143,7 +143,7 @@ function numberOfStars() {
 
 
 // Call function nuberOfStars and assign value to variable.
-const StarCount = numberOfStars();
+let StarCount = numberOfStars();
 
 // Function to add game stats to modal.
 function addModalData() {
@@ -180,12 +180,12 @@ function resetClock() {
 // Function to reset score (star count).
 function resetStars() {
   StarCount = 0;
-  totalStars[0].classList.Add('hidden');
-  totalStars[1].classList.Add('hidden');
+  totalStars[0].classList.Add = 'hidden';
+  totalStars[1].classList.Add = 'hidden';
 }
 
 // Function to reset all game elements to start a new game.
-Function newGame() {
+function newGame() {
   resetClock();
   shuffleCards();
   resetPlayerMoves();
@@ -217,9 +217,7 @@ modalClose.addEventListener('click', function() {
 //Select restart button element from DOM.
 const restart = document.querySelector('.restart i');
 //restart button click event listener.
-restart.addEventListener('click', function() {
-  shuffleCards();
-});
+restart.addEventListener('click', newGame);
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
