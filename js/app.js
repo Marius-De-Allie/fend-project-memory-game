@@ -163,6 +163,12 @@ toggleModal();
 // Call to resetClock fn to allow clock to be reset with page reloads.
 stopTimer();
 
+// Function to reset player game moves.
+function resetPlayerMoves() {
+  playerMoves = 0;
+  const movesContent = document.querySelector('.moves');
+  movesContent.innerHTML = playerMoves;
+}
 // Function to reset game clock.
 function resetClock() {
   stopTimer();
