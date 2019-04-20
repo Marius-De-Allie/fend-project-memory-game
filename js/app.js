@@ -178,7 +178,10 @@ cardDeck.addEventListener('click', function(event) {
     }
   }
 });
-
+// Modal close button click event listener.
+modalClose.addEventListener('click', function() {
+  toggleModal();
+})
 //Select restart button element from DOM.
 const restart = document.querySelector('.restart i');
 //restart button click event listener.
