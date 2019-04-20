@@ -183,6 +183,14 @@ function resetStars() {
   totalStars[0].classList.Add('hidden');
   totalStars[1].classList.Add('hidden');
 }
+
+// Function to reset all game elements to start a new game.
+Function newGame() {
+  resetClock();
+  shuffleCards();
+  resetPlayerMoves();
+  resetStars();
+}
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
   const target = event.target; // Event Delegation
