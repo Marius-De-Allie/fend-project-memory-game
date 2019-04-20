@@ -161,7 +161,15 @@ function toggleModal() {
 toggleModal();
 
 // Call to resetClock fn to allow clock to be reset with page reloads.
-resetClock();
+stopTimer();
+
+// Function to reset game clock.
+function resetClock() {
+  stopTimer();
+  timerOff = true;
+  time = 0;
+  showTime();
+}
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
   const target = event.target; // Event Delegation
