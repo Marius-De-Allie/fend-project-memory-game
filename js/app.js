@@ -128,7 +128,7 @@ function startTimer() {
 }
 
 // Function to reset game clock.
-function resetClock() {
+function stopTimer() {
   clearInterval(timerId);
 }
 
