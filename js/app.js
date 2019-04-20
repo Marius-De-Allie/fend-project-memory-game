@@ -126,13 +126,7 @@ function resetClock() {
   clearInterval(timerId);
 }
 
-// Function to add game stats to modal.
-function addModalData() {
-  const gameTime = document.querySelector('.clock').innerHTML;
-  document.querySelector('#time').innerHTML = `Time: ${gameTime}`;
-  document.querySelector('#moves').innerHTML = `Moves: ${playerMoves}`;
-}
-
+// function to return score (# of stars) from last game played.
 function numberOfStars() {
   totalStars = [...document.querySelectorAll('.star li');
   stars = 0;
@@ -141,6 +135,17 @@ function numberOfStars() {
   }
 }
 return stars;
+
+// Call function nuberOfStars and assign value to variable.
+const numberOfStars = numberOfStars();
+
+// Function to add game stats to modal.
+function addModalData() {
+  const gameTime = document.querySelector('.clock').innerHTML;
+  document.querySelector('#time').innerHTML = `Time: ${gameTime}`;
+  document.querySelector('#moves').innerHTML = `Moves: ${playerMoves}`;
+  document.querySelector('#score').innerHTML = `Stars: ${numberOfStars}`;
+}
 
 // addModalData();
 // Call to resetClock fn to allow clock to be reset with page reloads.
