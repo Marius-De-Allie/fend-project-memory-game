@@ -146,8 +146,12 @@ function addModalData() {
   document.querySelector('#moves').innerHTML = `Moves: ${playerMoves}`;
   document.querySelector('#score').innerHTML = `Stars: ${numberOfStars}`;
 }
-
 // addModalData();
+
+// Function to toggle '.hidden' class on Modal object.
+function toggleModal() {
+  document.querySelector('.modal').classList.toggle('hidden');
+}
 // Call to resetClock fn to allow clock to be reset with page reloads.
 resetClock();
 // Event listener for click on cards parent element using event delegation
