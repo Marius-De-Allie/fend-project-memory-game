@@ -94,10 +94,10 @@ function movesCounter () {
 function score () {
   switch (playerMoves) {
     case 12:
-      starParent.removeChild(document.querySelector('li'));
+      totalStars.ClassList.toggle('hidden');
       break;
     case 16:
-      starParent.removeChild(document.querySelector('li'));
+      totalStars.ClassList.toggle('hidden');
       break;
   }
 }
