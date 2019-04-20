@@ -176,6 +176,13 @@ function resetClock() {
   time = 0;
   showTime();
 }
+
+// Function to reset score (star count).
+function resetStars() {
+  StarCount = 0;
+  totalStars[0].classList.Add('hidden');
+  totalStars[1].classList.Add('hidden');
+}
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
   const target = event.target; // Event Delegation
