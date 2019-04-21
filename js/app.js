@@ -1,4 +1,3 @@
-
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -13,35 +12,35 @@ function shuffle(array) {
 
     return array;
 }
-
+/* Selection of DOM elements */
 // Select parent element of game cards from DOM.
 const cardDeck = document.querySelector('.deck');
-
 // select all 16 card list elements and assign to array (allCards).
 const allCards = [...document.querySelectorAll('.deck li')];
-
-let flippedCards = [];
-// declare variable to track player moves.
-let playerMoves = 0;
 // select stars parent element
 const starParent = document.querySelector('.stars');
-// declare variable to keep track of status of game timer(clock), set to off.
-let timerOff = true;
-// declare variable to hold value of time.
-let time = 0;
-let timerId;
- // select modal close button DOM element and assign to variable.
+// select modal close button DOM element and assign to variable.
 const modalClose = document.querySelector('.close_button');
 // select modal new game button DOM element and assign to variable.
 const modalNewGame = document.querySelector('#restart_button');
  // select all star elements from DOM and assign to variable.
 const totalStars = [...document.querySelectorAll('.stars li')];
+// Select restart button element from DOM.
+const restart = document.querySelector('.restart i');
+/* Declaration of global variables */
+let flippedCards = [];
+// declare variable to track player moves.
+let playerMoves = 0;
+// declare variable to keep track of status of game timer(clock), set to off.
+let timerOff = true;
+// declare variable to hold value of time.
+let time = 0;
+// declare intervalId variable
+let timerId;
 // declare variable to keep count of cards that are matched.
 let matchedCards = 0;
 // Variable to hold number of pairs of cards in deck.
 const allCardPairs = 8;
-//Select restart button element from DOM.
-const restart = document.querySelector('.restart i');
 
 // Function to shuffle deck of cards
 function shuffleCards() {
@@ -53,13 +52,13 @@ function shuffleCards() {
 }
 shuffleCards();
 
-// function to toggle class ('open show') of cards.
+// Function to toggle class ('open show') of cards.
 function toggleOpenShow (targetCard) {
   targetCard.classList.toggle('open');
   targetCard.classList.toggle('show');
 }
 
-// function to check for card match in flippedCards array
+// Function to check for card match in flippedCards array
 function comparCards () {
   if (flippedCards[0].firstElementChild.className === flippedCards[1].
   firstElementChild.className) {
@@ -80,7 +79,7 @@ function comparCards () {
   }
 }
 
- // function to increment moves counter element by one.
+ // Function to increment moves counter element by one.
 function movesCounter () {
   playerMoves++;
   const movesContent = document.querySelector('.moves');
@@ -129,7 +128,7 @@ function stopTimer() {
   clearInterval(timerId);
 }
 
-// function to return score (# of stars) from last game played.
+// Function to return score (# of stars) from last game played.
 function numberOfStars() {
   starList = document.querySelectorAll('.stars li');
   stars = 0;
@@ -153,9 +152,8 @@ function addModalData() {
 function toggleModal() {
   document.querySelector('.modal').classList.toggle('hidden');
 }
-
 // Call to resetClock fn to allow clock to be reset with page reloads.
-stopTimer();
+// stopTimer();
 
 // Function to reset player game moves.
 function resetPlayerMoves() {
@@ -233,7 +231,7 @@ modalClose.addEventListener('click', function() {
 modalNewGame.addEventListener('click', function() {
   newGameModal();
 });
-//restart button click event listener.
+// Restart button click event listener.
 restart.addEventListener('click', function() {
   newGame();
 });
