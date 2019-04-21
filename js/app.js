@@ -227,7 +227,7 @@ cardDeck.addEventListener('click', function(event) {
       movesCounter();
       score();       // adjust stars (score) based on # of player moves
       if (matchedCards === allCardPairs) {
-        console.log('Game over');
+        gameWon();
       }
     }
   }
