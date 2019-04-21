@@ -140,9 +140,12 @@ function stopTimer() {
 
 // function to return score (# of stars) from last game played.
 function numberOfStars() {
+  starList = document.querySelectorAll('.stars li');
   stars = 0;
-  for (star of totalStars) {
-    stars++;
+  for (star of starList) {
+    if (!star.firstElementChild.classList.contains('hidden')) {
+      stars++;
+    }
   }
   return stars;
 }
@@ -156,7 +159,7 @@ function addModalData() {
   const gameTime = document.querySelector('.clock').innerHTML;
   document.querySelector('#time').innerHTML = `Time: ${gameTime}`;
   document.querySelector('#moves').innerHTML = `Moves: ${playerMoves}`;
-  document.querySelector('#score').innerHTML = `Stars: ${starCount}`;
+  document.querySelector('#score').innerHTML = `Stars: ${numberOfStars()}`;
 }
 addModalData();
 
