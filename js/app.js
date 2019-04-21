@@ -50,7 +50,6 @@ function shuffleCards() {
     card.className = 'card';
   }
 }
-shuffleCards();
 
 // Function to toggle class ('open show') of cards.
 function toggleOpenShow (targetCard) {
