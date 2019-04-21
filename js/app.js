@@ -196,11 +196,8 @@ function newGame() {
 
  // Function to reset all game elements and hide modal.
 function newGameModal() {
-  resetClock();
-  shuffleCards();
-  resetPlayerMoves();
-  resetStars();
-  toggleModal();
+  newGame();
+  document.querySelector('.modal').classList.add('hidden');
 }
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
