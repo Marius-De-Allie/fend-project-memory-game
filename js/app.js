@@ -203,6 +203,13 @@ function newGameModal() {
   newGame();
   document.querySelector('.modal').classList.add('hidden');
 }
+
+// Function to stop timer and display game stats to Modal.
+function gameWon() {
+  stopTimer();
+  addModalData();
+  toggleModal();
+}
 // Event listener for click on cards parent element using event delegation
 cardDeck.addEventListener('click', function(event) {
   const target = event.target; // Event Delegation
