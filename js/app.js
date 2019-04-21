@@ -1,14 +1,3 @@
-/*
- * Create a list that holds all of your cards
- */
-
-
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -157,7 +146,6 @@ function addModalData() {
   document.querySelector('#moves').innerHTML = `Moves: ${playerMoves}`;
   document.querySelector('#score').innerHTML = `Stars: ${numberOfStars()}`;
 }
-addModalData();
 
 // Function to toggle '.hidden' class on Modal object.
 function toggleModal() {
