@@ -44,7 +44,7 @@ let timerId;
  // select modal close button element and assign to variable.
 const modalClose = document.querySelector('.close_button');
  // select all star elements from DOM and assign to variable.
-const totalStars = [...document.querySelectorAll('.stars i')];
+const totalStars = [...document.querySelectorAll('.stars li')];
 
 // Function to shuffle deck of cards
 function shuffleCards() {
