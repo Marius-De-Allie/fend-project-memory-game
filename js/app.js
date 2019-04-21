@@ -51,6 +51,7 @@ const totalStars = [...document.querySelectorAll('.stars li')];
 let matchedCards = 0;
 // Variable to hold number of pairs of cards in deck.
 const allCardPairs = 8;
+
 // Function to shuffle deck of cards
 function shuffleCards() {
   let cardsShuffled = shuffle(allCards);
@@ -59,7 +60,6 @@ function shuffleCards() {
     card.className = 'card';
   }
 }
-
 shuffleCards();
 
 // function to toggle class ('open show') of cards.
@@ -163,7 +163,6 @@ addModalData();
 function toggleModal() {
   document.querySelector('.modal').classList.toggle('hidden');
 }
-toggleModal();
 
 // Call to resetClock fn to allow clock to be reset with page reloads.
 stopTimer();
@@ -184,10 +183,11 @@ function resetClock() {
 
 // Function to reset score (star count).
 function resetStars() {
-  StarCount = 0
+  starCount = 0
   totalStars[0].firstElementChild.classList.remove('hidden');
   totalStars[1].firstElementChild.classList.remove('hidden');
 }
+resetStars();
 
 // Function to reset all game elements to start a new game.
 function newGame() {
@@ -199,8 +199,11 @@ function newGame() {
 
  // Function to reset all game elements and hide modal.
 function newGameModal() {
-  newGame();
-  document.querySelector('.modal').classList.add('hidden');
+  resetClock();
+  shuffleCards();
+  resetPlayerMoves();
+  resetStars();
+  toggleModal();
 }
 
 // Function to stop timer and display game stats to Modal.
@@ -236,7 +239,9 @@ modalClose.addEventListener('click', function() {
   toggleModal();
 });
 // Modal new game button click event listener.
-modalNewGame.addEventListener('click', newGameModal());
+modalNewGame.addEventListener('click', function() {
+  newGameModal();
+});
 //Select restart button element from DOM.
 const restart = document.querySelector('.restart i');
 //restart button click event listener.
