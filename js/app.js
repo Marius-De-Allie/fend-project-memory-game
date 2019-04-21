@@ -173,7 +173,6 @@ function resetStars() {
   totalStars[0].firstElementChild.classList.remove('hidden');
   totalStars[1].firstElementChild.classList.remove('hidden');
 }
-resetStars();
 
 // Function to reset all game elements to start a new game.
 function newGame() {
