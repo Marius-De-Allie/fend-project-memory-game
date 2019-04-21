@@ -225,6 +225,8 @@ cardDeck.addEventListener('click', function(event) {
 modalClose.addEventListener('click', function() {
   toggleModal();
 });
+// Modal new game button click event listener.
+modalNewGame.addEventListener('click', newGameModal());
 //Select restart button element from DOM.
 const restart = document.querySelector('.restart i');
 //restart button click event listener.
