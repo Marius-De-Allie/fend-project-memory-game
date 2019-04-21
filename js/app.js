@@ -40,6 +40,8 @@ const totalStars = [...document.querySelectorAll('.stars li')];
 let matchedCards = 0;
 // Variable to hold number of pairs of cards in deck.
 const allCardPairs = 8;
+//Select restart button element from DOM.
+const restart = document.querySelector('.restart i');
 
 // Function to shuffle deck of cards
 function shuffleCards() {
@@ -231,7 +233,5 @@ modalClose.addEventListener('click', function() {
 modalNewGame.addEventListener('click', function() {
   newGameModal();
 });
-//Select restart button element from DOM.
-const restart = document.querySelector('.restart i');
 //restart button click event listener.
 restart.addEventListener('click', newGame);
