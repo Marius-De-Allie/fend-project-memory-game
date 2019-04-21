@@ -234,4 +234,6 @@ modalNewGame.addEventListener('click', function() {
   newGameModal();
 });
 //restart button click event listener.
-restart.addEventListener('click', newGame);
+restart.addEventListener('click', function() {
+  newGame();
+});
