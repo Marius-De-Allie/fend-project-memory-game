@@ -150,10 +150,6 @@ function numberOfStars() {
   return stars;
 }
 
-
-// Call function nuberOfStars and assign value to variable.
-let starCount = numberOfStars();
-
 // Function to add game stats to modal.
 function addModalData() {
   const gameTime = document.querySelector('.clock').innerHTML;
