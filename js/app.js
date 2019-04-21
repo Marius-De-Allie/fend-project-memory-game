@@ -76,6 +76,7 @@ function comparCards () {
     }
     flippedCards = []; /*empty array after matching card classes have been set
     to 'match' class.*/
+    matchedCards++ // increment matchedCards var by 1 for each match.
   }
   else {
     setTimeout(function() {
