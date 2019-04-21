@@ -170,7 +170,6 @@ function resetClock() {
 
 // Function to reset score (star count).
 function resetStars() {
-  starCount = 0
   totalStars[0].firstElementChild.classList.remove('hidden');
   totalStars[1].firstElementChild.classList.remove('hidden');
 }
