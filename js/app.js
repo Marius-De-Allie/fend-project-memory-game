@@ -41,8 +41,10 @@ let timerOff = true;
 // declare variable to hold value of time.
 let time = 0;
 let timerId;
- // select modal close button element and assign to variable.
+ // select modal close button DOM element and assign to variable.
 const modalClose = document.querySelector('.close_button');
+// select modal new game button DOM element and assign to variable.
+const modalNewGame = document.querySelector('#restart_button');
  // select all star elements from DOM and assign to variable.
 const totalStars = [...document.querySelectorAll('.stars li')];
 
