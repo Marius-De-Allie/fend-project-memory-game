@@ -219,6 +219,9 @@ cardDeck.addEventListener('click', function(event) {
       comparCards();
       movesCounter();
       score();       // adjust stars (score) based on # of player moves
+      if (matchedCards === allCardPairs) {
+        console.log('Game over');
+      }
     }
   }
 });
