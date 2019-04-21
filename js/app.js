@@ -47,6 +47,8 @@ const modalClose = document.querySelector('.close_button');
 const modalNewGame = document.querySelector('#restart_button');
  // select all star elements from DOM and assign to variable.
 const totalStars = [...document.querySelectorAll('.stars li')];
+// dedclare variable to keep count of cards that are matched.
+let matchedCards = 0;
 
 // Function to shuffle deck of cards
 function shuffleCards() {
