@@ -154,6 +154,7 @@ function toggleModal() {
 
 // Function to reset player game moves.
 function resetPlayerMoves() {
+  matchedCards = 0;
   playerMoves = 0;
   const movesContent = document.querySelector('.moves');
   movesContent.innerHTML = playerMoves;
