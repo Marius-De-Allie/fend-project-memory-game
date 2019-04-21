@@ -179,9 +179,9 @@ function resetClock() {
 
 // Function to reset score (star count).
 function resetStars() {
-  StarCount = 0;
-  totalStars[0].classList.Add = 'hidden';
-  totalStars[1].classList.Add = 'hidden';
+  StarCount = 0
+  totalStars[0].firstElementChild.classList.remove('hidden');
+  totalStars[1].firstElementChild.classList.remove('hidden');
 }
 
 // Function to reset all game elements to start a new game.
