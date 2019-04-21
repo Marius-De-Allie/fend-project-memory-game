@@ -95,12 +95,12 @@ function score () {
   switch (playerMoves) {
     case 12:
       for (let i = 0; i < 1; i++) {
-        totalStars[i].classList.toggle('hidden');
+        totalStars[i].firstElementChild.classList.toggle('hidden');
       }
       break;
     case 16:
     for (let i = 1; i < 2; i++) {
-      totalStars[i].classList.toggle('hidden');
+      totalStars[i].firstElementChild.classList.toggle('hidden');
     }
     break;
   }
