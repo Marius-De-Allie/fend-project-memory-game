@@ -151,8 +151,6 @@ function addModalData() {
 function toggleModal() {
   document.querySelector('.modal').classList.toggle('hidden');
 }
-// Call to resetClock fn to allow clock to be reset with page reloads.
-// stopTimer();
 
 // Function to reset player game moves.
 function resetPlayerMoves() {
