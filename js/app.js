@@ -181,6 +181,8 @@ function newGame() {
   resetPlayerMoves();
   resetStars();
 }
+// Function call to start a new game on page refresh.
+newGame();
 
  // Function to reset all game elements and hide modal.
 function newGameModal() {
